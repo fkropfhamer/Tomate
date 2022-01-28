@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var timer = TomatoTimer()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text(String( timer.secondsElapsed))
+            NavigationLink(destination: Text("top")) {
+                Text("Hello, world!")
+                    .padding()
+            }
+            ZStack {
+                Circle().strokeBorder(lineWidth: 50)
+                if (timer.timerStopped) {
+                    Button(action: start) {
+                        Text("Start")
+                    }
+                } else {
+                    Button(action: stop) {
+                        Text("Stop")
+                    }
+                }
+            }
+            NavigationLink(destination: Text("bottom")) {
+                Text("Bottom")
+            }
+        }
+    }
+    
+    private func start() {
+        timer.startTimer()
+    }
+    
+    private func stop() {
+        timer.stop()
     }
 }
 

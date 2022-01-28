@@ -27,6 +27,7 @@
 		FC57CEB527A451CF00E4B370 /* Tomate_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEB427A451CF00E4B370 /* Tomate_WatchKit_AppTests.swift */; };
 		FC57CEBF27A451CF00E4B370 /* Tomate_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEBE27A451CF00E4B370 /* Tomate_WatchKit_AppUITests.swift */; };
 		FC57CEC127A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */; };
+		FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		FC57CEBA27A451CF00E4B370 /* Tomate WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tomate WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC57CEBE27A451CF00E4B370 /* Tomate_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomate_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomate_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		FC57CE6927A451CA00E4B370 /* Tomate */ = {
 			isa = PBXGroup;
 			children = (
+				FC57CEDB27A4529B00E4B370 /* Models */,
 				FC57CE6A27A451CA00E4B370 /* TomateApp.swift */,
 				FC57CE6C27A451CA00E4B370 /* ContentView.swift */,
 				FC57CE6E27A451CC00E4B370 /* Assets.xcassets */,
@@ -286,6 +289,14 @@
 				FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */,
 			);
 			path = "Tomate WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+		FC57CEDB27A4529B00E4B370 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +552,7 @@
 			files = (
 				FC57CE6D27A451CA00E4B370 /* ContentView.swift in Sources */,
 				FC57CE6B27A451CA00E4B370 /* TomateApp.swift in Sources */,
+				FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

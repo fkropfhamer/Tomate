@@ -11,7 +11,9 @@ import SwiftUI
 struct TomateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }
