@@ -10,6 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var timer = TomatoTimer()
     
+    private var backgroundColor: Color {
+        if timer.isWorking {
+            return Color.red
+        } else if timer.isShortBreak {
+            return Color.green
+        }
+        
+        return Color.purple
+    }
+    
     var body: some View {
         VStack {
             Text(String( timer.secondsElapsed))
@@ -29,10 +39,8 @@ struct ContentView: View {
                     }
                 }
             }
-            NavigationLink(destination: Text("bottom")) {
-                Text("Bottom")
-            }
-        }
+            Text(String(timer.tomatoCount) + " / 4")
+        }.background(backgroundColor)
     }
     
     private func start() {
