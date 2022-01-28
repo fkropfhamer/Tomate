@@ -28,6 +28,7 @@
 		FC57CEBF27A451CF00E4B370 /* Tomate_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEBE27A451CF00E4B370 /* Tomate_WatchKit_AppUITests.swift */; };
 		FC57CEC127A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */; };
 		FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */; };
+		FC57CEDF27A464E700E4B370 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEDE27A464E700E4B370 /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		FC57CEBE27A451CF00E4B370 /* Tomate_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomate_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomate_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimer.swift; sourceTree = "<group>"; };
+		FC57CEDE27A464E700E4B370 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */,
+				FC57CEDE27A464E700E4B370 /* Score.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			files = (
 				FC57CE6D27A451CA00E4B370 /* ContentView.swift in Sources */,
 				FC57CE6B27A451CA00E4B370 /* TomateApp.swift in Sources */,
+				FC57CEDF27A464E700E4B370 /* Score.swift in Sources */,
 				FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

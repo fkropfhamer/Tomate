@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var timer = TomatoTimer()
+    @StateObject var score = Score.shared
     
     private var backgroundColor: Color {
         if timer.isWorking {
@@ -31,7 +32,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(String(timer.secondsElapsed))
-            NavigationLink(destination: Text("top")) {
+            NavigationLink(destination: Text("Score " + String(score.score))) {
                 Text("Hello, world!")
             }
             Text(status)

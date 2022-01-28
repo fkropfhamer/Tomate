@@ -61,6 +61,7 @@ class TomatoTimer : ObservableObject {
             notify()
             isWorking = false
             tomatoCount += 1
+            Score.shared.scored()
             if (tomatoCount >= 4) {
                 isBigBreak = true
             } else {
