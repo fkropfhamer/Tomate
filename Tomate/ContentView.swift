@@ -20,13 +20,24 @@ struct ContentView: View {
         return Color.purple
     }
     
+    private var status: String {
+        if timer.isWorking {
+            return "Work"
+        }
+        
+        return "Break"
+    }
+    
     var body: some View {
         VStack {
-            Text(String( timer.secondsElapsed))
+            Text(String(timer.secondsElapsed))
             NavigationLink(destination: Text("top")) {
                 Text("Hello, world!")
-                    .padding()
             }
+            Text(status)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             ZStack {
                 Circle().strokeBorder(lineWidth: 50)
                 if (timer.timerStopped) {
