@@ -51,7 +51,12 @@ struct ContentView: View {
                     }
                 }
             }
-            Text(String(timer.tomatoCount) + " / 4")
+            HStack {
+                Text(String(timer.tomatoCount) + " / 4")
+                Button(action: skip) {
+                    Text("Skip")
+                }
+            }
         }.background(backgroundColor)
     }
     
@@ -62,6 +67,10 @@ struct ContentView: View {
     private func stop() {
         timer.stop()
     }
+         
+         private func skip() {
+             timer.skip()
+         }
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -20,10 +20,19 @@ class TomatoTimer : ObservableObject {
     private var timer: Timer?
     private var frequency = 1.0 / 60.0
     private var startDate: Date?
-    private var targetSeconds = 60
+    private var workingSeconds = 60
     private var shortBreakSeconds = 10
     private var bigBreakSeconds = 30
     private var isPaused = false
+    private var targetSeconds: Int {
+        if (isWorking) {
+            return workingSeconds
+        } else if (isBigBreak) {
+            return bigBreakSeconds
+        } else {
+            return shortBreakSeconds
+        }
+    }
     
     public func startTimer() {
         startDate = Date()
@@ -47,6 +56,12 @@ class TomatoTimer : ObservableObject {
         stop()
     }
     
+    public func skip() {
+        stop()
+        
+        updateState(secondsElapsed: targetSeconds)
+    }
+    
     private func notify() {
         print("Alarm!")
         AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) {}
@@ -56,7 +71,11 @@ class TomatoTimer : ObservableObject {
         self.secondsElapsed = secondsElapsed
         if timerStopped {return}
         
-        if (isWorking && secondsElapsed == targetSeconds) {
+       updateState(secondsElapsed: secondsElapsed)
+    }
+    
+    private func updateState(secondsElapsed: Int) {
+        if (isWorking && secondsElapsed == workingSeconds) {
             stop()
             notify()
             isWorking = false
@@ -73,13 +92,13 @@ class TomatoTimer : ObservableObject {
             notify()
             isWorking = true
             isShortBreak = false
+            tomatoCount = 0
             self.secondsElapsed = 0
         } else if (isShortBreak && secondsElapsed == shortBreakSeconds) {
             stop()
             notify()
             isWorking = true
             isShortBreak = false
-            tomatoCount = 0
             self.secondsElapsed = 0
         }
     }
