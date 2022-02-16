@@ -12,21 +12,25 @@ struct ContentView: View {
     @StateObject var score = Score.shared
     
     private var backgroundColor: Color {
-        if timer.isWorking {
-            return Color.red
-        } else if timer.isShortBreak {
+        switch timer.state {
+        case .longBreak:
+            return Color.purple
+        case .shortBreak:
             return Color.green
+        case .working:
+            return Color.red
         }
-        
-        return Color.purple
     }
     
     private var status: String {
-        if timer.isWorking {
+        switch timer.state {
+        case .longBreak:
+            return "long Break"
+        case .shortBreak:
+            return "Break"
+        case .working:
             return "Work"
         }
-        
-        return "Break"
     }
     
     var body: some View {

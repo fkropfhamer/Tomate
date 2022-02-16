@@ -5,6 +5,12 @@
 //  Created by Fabian Kropfhamer on 28.01.22.
 //
 
+enum TimerState {
+    case longBreak
+    case shortBreak
+    case working
+}
+
 import Foundation
 import AudioToolbox
 
@@ -12,9 +18,7 @@ class TomatoTimer : ObservableObject {
     @Published var secondsElapsed = 0
     @Published var secondsRemaining = 0
     @Published var timerStopped = true
-    @Published var isBigBreak = false
-    @Published var isShortBreak = false
-    @Published var isWorking = true
+    @Published var state = TimerState.working
     @Published var tomatoCount = 0
     
     private var timer: Timer?
@@ -22,15 +26,16 @@ class TomatoTimer : ObservableObject {
     private var startDate: Date?
     private var workingSeconds = 60
     private var shortBreakSeconds = 10
-    private var bigBreakSeconds = 30
+    private var longBreakSeconds = 30
     private var isPaused = false
     private var targetSeconds: Int {
-        if (isWorking) {
-            return workingSeconds
-        } else if (isBigBreak) {
-            return bigBreakSeconds
-        } else {
+        switch state {
+        case .longBreak:
+            return longBreakSeconds
+        case .shortBreak:
             return shortBreakSeconds
+        case .working:
+            return workingSeconds
         }
     }
     
@@ -75,31 +80,32 @@ class TomatoTimer : ObservableObject {
     }
     
     private func updateState(secondsElapsed: Int) {
-        if (isWorking && secondsElapsed == workingSeconds) {
+        if (secondsElapsed != targetSeconds) {
+            return
+        }
+        
+        switch state {
+        case .longBreak:
             stop()
             notify()
-            isWorking = false
+            state = .working
+            tomatoCount = 0
+        case .shortBreak:
+            stop()
+            notify()
+            state = .working
+        case .working:
+            stop()
+            notify()
             tomatoCount += 1
             Score.shared.scored()
             if (tomatoCount >= 4) {
-                isBigBreak = true
+                state = .longBreak
             } else {
-                isShortBreak = true
+                state = .shortBreak
             }
-            self.secondsElapsed = 0
-        } else if (isBigBreak && secondsElapsed == bigBreakSeconds) {
-            stop()
-            notify()
-            isWorking = true
-            isShortBreak = false
-            tomatoCount = 0
-            self.secondsElapsed = 0
-        } else if (isShortBreak && secondsElapsed == shortBreakSeconds) {
-            stop()
-            notify()
-            isWorking = true
-            isShortBreak = false
-            self.secondsElapsed = 0
         }
+        
+        self.secondsElapsed = 0
     }
 }
