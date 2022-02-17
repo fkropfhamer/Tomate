@@ -12,7 +12,7 @@ struct TomateApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView().navigationBarHidden(true)
             }
         }
     }

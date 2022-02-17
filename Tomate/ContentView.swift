@@ -35,14 +35,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text(String(timer.secondsElapsed))
             NavigationLink(destination: Text("Score " + String(score.score))) {
                 Text("Hello, world!")
             }
             Text(status)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .padding(.top, 50)
             ZStack {
                 Circle().strokeBorder(lineWidth: 50)
                 if (timer.timerStopped) {
@@ -55,6 +54,9 @@ struct ContentView: View {
                     }
                 }
             }
+            Text(String(timer.secondsElapsed))
+                .font(.largeTitle)
+                .fontWeight(.bold).padding(.bottom, 50)
             HStack {
                 Text(String(timer.tomatoCount) + " / 4")
                 Button(action: skip) {
