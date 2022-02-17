@@ -29,6 +29,7 @@
 		FC57CEC127A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */; };
 		FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */; };
 		FC57CEDF27A464E700E4B370 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CEDE27A464E700E4B370 /* Score.swift */; };
+		FC7EF44527BE480800424DB9 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EF44427BE480800424DB9 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		FC57CEC027A451CF00E4B370 /* Tomate_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomate_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoTimer.swift; sourceTree = "<group>"; };
 		FC57CEDE27A464E700E4B370 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		FC7EF44427BE480800424DB9 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				FC57CEDB27A4529B00E4B370 /* Models */,
 				FC57CE6A27A451CA00E4B370 /* TomateApp.swift */,
 				FC57CE6C27A451CA00E4B370 /* ContentView.swift */,
+				FC7EF44427BE480800424DB9 /* ProgressBar.swift */,
 				FC57CE6E27A451CC00E4B370 /* Assets.xcassets */,
 				FC57CE7027A451CC00E4B370 /* Preview Content */,
 			);
@@ -556,6 +559,7 @@
 				FC57CE6D27A451CA00E4B370 /* ContentView.swift in Sources */,
 				FC57CE6B27A451CA00E4B370 /* TomateApp.swift in Sources */,
 				FC57CEDF27A464E700E4B370 /* Score.swift in Sources */,
+				FC7EF44527BE480800424DB9 /* ProgressBar.swift in Sources */,
 				FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

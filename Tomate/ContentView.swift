@@ -16,7 +16,7 @@ struct ContentView: View {
         case .longBreak:
             return Color.purple
         case .shortBreak:
-            return Color.green
+            return Color.brown
         case .working:
             return Color.red
         }
@@ -43,7 +43,7 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .padding(.top, 50)
             ZStack {
-                Circle().strokeBorder(lineWidth: 50)
+                ProgressBar(progress: $timer.progress).padding(50)
                 if (timer.timerStopped) {
                     Button(action: start) {
                         Text("Start")

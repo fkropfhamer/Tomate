@@ -20,6 +20,7 @@ class TomatoTimer : ObservableObject {
     @Published var timerStopped = true
     @Published var state = TimerState.working
     @Published var tomatoCount = 0
+    @Published var progress = 0.0
     
     private var timer: Timer?
     private var frequency = 1.0 / 60.0
@@ -75,8 +76,13 @@ class TomatoTimer : ObservableObject {
     private func update(secondsElapsed: Int) {
         self.secondsElapsed = secondsElapsed
         if timerStopped {return}
+        updateProgress()
         
        updateState(secondsElapsed: secondsElapsed)
+    }
+    
+    private func updateProgress() {
+        progress = Double(secondsElapsed) / Double(targetSeconds)
     }
     
     private func updateState(secondsElapsed: Int) {
@@ -107,5 +113,6 @@ class TomatoTimer : ObservableObject {
         }
         
         self.secondsElapsed = 0
+        updateProgress()
     }
 }
