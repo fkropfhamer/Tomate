@@ -46,11 +46,11 @@ class TomatoTimer : ObservableObject {
     }
     
     private func scheduleNotification() {
-        call()
+        
     }
     
     private func cancelNotification() {
-        cancel()
+        
     }
     
     private func startTimer() {
