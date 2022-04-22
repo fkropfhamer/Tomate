@@ -67,7 +67,7 @@ struct ContentView: View {
     }
     
     private func start() {
-        timer.startTimer()
+        timer.start()
     }
     
     private func stop() {

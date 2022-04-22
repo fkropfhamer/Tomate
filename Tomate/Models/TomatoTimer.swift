@@ -40,7 +40,20 @@ class TomatoTimer : ObservableObject {
         }
     }
     
-    public func startTimer() {
+    public func start() {
+        startTimer()
+        scheduleNotification()
+    }
+    
+    private func scheduleNotification() {
+        call()
+    }
+    
+    private func cancelNotification() {
+        cancel()
+    }
+    
+    private func startTimer() {
         startDate = Date()
         let secondsAlreadyElapsed = secondsElapsed
         timer = Timer.scheduledTimer(withTimeInterval: frequency , repeats: true) {
@@ -56,6 +69,7 @@ class TomatoTimer : ObservableObject {
     public func stop() {
         timer?.invalidate()
         timerStopped = true
+        cancelNotification()
     }
     
     public func pause() {
