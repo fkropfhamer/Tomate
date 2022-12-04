@@ -23,14 +23,7 @@ struct ContentView: View {
     }
     
     private var status: String {
-        switch timer.state {
-        case .longBreak:
-            return "long Break"
-        case .shortBreak:
-            return "Break"
-        case .working:
-            return "Work"
-        }
+        timer.state.name
     }
     
     var body: some View {

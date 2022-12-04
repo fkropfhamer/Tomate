@@ -4,25 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Tomate WatchKit App (Complication).xcscheme_^#shared#^_</key>
+		<key>LiveWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
-		<key>Tomate WatchKit App (Notification).xcscheme_^#shared#^_</key>
+		<key>Tomate WatchKit App (Complication).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Tomate WatchKit App (Notification).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Tomate WatchKit App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Tomate.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>

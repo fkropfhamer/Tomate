@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC020B77293CC223006B84E3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC020B76293CC223006B84E3 /* WidgetKit.framework */; };
+		FC020B79293CC223006B84E3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC020B78293CC223006B84E3 /* SwiftUI.framework */; };
+		FC020B7C293CC224006B84E3 /* LiveWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC020B7B293CC224006B84E3 /* LiveWidgetBundle.swift */; };
+		FC020B7E293CC224006B84E3 /* LiveWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC020B7D293CC224006B84E3 /* LiveWidgetLiveActivity.swift */; };
+		FC020B80293CC224006B84E3 /* LiveWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC020B7F293CC224006B84E3 /* LiveWidget.swift */; };
+		FC020B82293CC224006B84E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC020B81293CC224006B84E3 /* Assets.xcassets */; };
+		FC020B86293CC224006B84E3 /* LiveWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FC020B74293CC223006B84E3 /* LiveWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FC020B8F293CC32A006B84E3 /* LiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC020B8E293CC32A006B84E3 /* LiveActivityAttributes.swift */; };
+		FC020B90293CC32A006B84E3 /* LiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC020B8E293CC32A006B84E3 /* LiveActivityAttributes.swift */; };
 		FC57CE6B27A451CA00E4B370 /* TomateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CE6A27A451CA00E4B370 /* TomateApp.swift */; };
 		FC57CE6D27A451CA00E4B370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CE6C27A451CA00E4B370 /* ContentView.swift */; };
 		FC57CE6F27A451CC00E4B370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57CE6E27A451CC00E4B370 /* Assets.xcassets */; };
@@ -32,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FC020B84293CC224006B84E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC020B73293CC223006B84E3;
+			remoteInfo = LiveWidgetExtension;
+		};
 		FC29F1E1293C9BB300CA5DD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
@@ -70,6 +86,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FC020B87293CC224006B84E3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FC020B86293CC224006B84E3 /* LiveWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC57CECB27A451CF00E4B370 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,6 +111,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC020B74293CC223006B84E3 /* LiveWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC020B76293CC223006B84E3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FC020B78293CC223006B84E3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FC020B7B293CC224006B84E3 /* LiveWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveWidgetBundle.swift; sourceTree = "<group>"; };
+		FC020B7D293CC224006B84E3 /* LiveWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		FC020B7F293CC224006B84E3 /* LiveWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveWidget.swift; sourceTree = "<group>"; };
+		FC020B81293CC224006B84E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC020B83293CC224006B84E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC020B8E293CC32A006B84E3 /* LiveActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityAttributes.swift; sourceTree = "<group>"; };
+		FC020B91293CCE91006B84E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FC57CE6727A451CA00E4B370 /* Tomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC57CE6A27A451CA00E4B370 /* TomateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateApp.swift; sourceTree = "<group>"; };
 		FC57CE6C27A451CA00E4B370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +153,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC020B71293CC223006B84E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC020B79293CC223006B84E3 /* SwiftUI.framework in Frameworks */,
+				FC020B77293CC223006B84E3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC57CE6427A451CA00E4B370 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +207,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC020B75293CC223006B84E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC020B76293CC223006B84E3 /* WidgetKit.framework */,
+				FC020B78293CC223006B84E3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC020B7A293CC224006B84E3 /* LiveWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FC020B7B293CC224006B84E3 /* LiveWidgetBundle.swift */,
+				FC020B7D293CC224006B84E3 /* LiveWidgetLiveActivity.swift */,
+				FC020B7F293CC224006B84E3 /* LiveWidget.swift */,
+				FC020B81293CC224006B84E3 /* Assets.xcassets */,
+				FC020B83293CC224006B84E3 /* Info.plist */,
+			);
+			path = LiveWidget;
+			sourceTree = "<group>";
+		};
 		FC57CE5E27A451CA00E4B370 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +238,8 @@
 				FC57CE9A27A451CE00E4B370 /* Tomate WatchKit Extension */,
 				FC57CEB327A451CF00E4B370 /* Tomate WatchKit AppTests */,
 				FC57CEBD27A451CF00E4B370 /* Tomate WatchKit AppUITests */,
+				FC020B7A293CC224006B84E3 /* LiveWidget */,
+				FC020B75293CC223006B84E3 /* Frameworks */,
 				FC57CE6827A451CA00E4B370 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,6 +253,7 @@
 				FC57CE8B27A451CC00E4B370 /* Tomate WatchKit App.app */,
 				FC57CEB027A451CF00E4B370 /* Tomate WatchKit AppTests.xctest */,
 				FC57CEBA27A451CF00E4B370 /* Tomate WatchKit AppUITests.xctest */,
+				FC020B74293CC223006B84E3 /* LiveWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +261,7 @@
 		FC57CE6927A451CA00E4B370 /* Tomate */ = {
 			isa = PBXGroup;
 			children = (
+				FC020B91293CCE91006B84E3 /* Info.plist */,
 				FC57CEDB27A4529B00E4B370 /* Models */,
 				FC57CE6A27A451CA00E4B370 /* TomateApp.swift */,
 				FC57CE6C27A451CA00E4B370 /* ContentView.swift */,
@@ -279,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				FC57CEDC27A452AE00E4B370 /* TomatoTimer.swift */,
+				FC020B8E293CC32A006B84E3 /* LiveActivityAttributes.swift */,
 				FC57CEDE27A464E700E4B370 /* Score.swift */,
 			);
 			path = Models;
@@ -287,6 +359,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FC020B73293CC223006B84E3 /* LiveWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC020B8A293CC224006B84E3 /* Build configuration list for PBXNativeTarget "LiveWidgetExtension" */;
+			buildPhases = (
+				FC020B70293CC223006B84E3 /* Sources */,
+				FC020B71293CC223006B84E3 /* Frameworks */,
+				FC020B72293CC223006B84E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveWidgetExtension;
+			productName = LiveWidgetExtension;
+			productReference = FC020B74293CC223006B84E3 /* LiveWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FC57CE6627A451CA00E4B370 /* Tomate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC57CECC27A451CF00E4B370 /* Build configuration list for PBXNativeTarget "Tomate" */;
@@ -295,11 +384,13 @@
 				FC57CE6427A451CA00E4B370 /* Frameworks */,
 				FC57CE6527A451CA00E4B370 /* Resources */,
 				FC57CECB27A451CF00E4B370 /* Embed Watch Content */,
+				FC020B87293CC224006B84E3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				FC57CE8E27A451CC00E4B370 /* PBXTargetDependency */,
+				FC020B85293CC224006B84E3 /* PBXTargetDependency */,
 			);
 			name = Tomate;
 			productName = Tomate;
@@ -402,9 +493,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					FC020B73293CC223006B84E3 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					FC57CE6627A451CA00E4B370 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -448,11 +542,20 @@
 				FC57CE8A27A451CC00E4B370 /* Tomate WatchKit App */,
 				FC57CEAF27A451CF00E4B370 /* Tomate WatchKit AppTests */,
 				FC57CEB927A451CF00E4B370 /* Tomate WatchKit AppUITests */,
+				FC020B73293CC223006B84E3 /* LiveWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FC020B72293CC223006B84E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC020B82293CC224006B84E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC57CE6527A451CA00E4B370 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,6 +606,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FC020B70293CC223006B84E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC020B7E293CC224006B84E3 /* LiveWidgetLiveActivity.swift in Sources */,
+				FC020B80293CC224006B84E3 /* LiveWidget.swift in Sources */,
+				FC020B7C293CC224006B84E3 /* LiveWidgetBundle.swift in Sources */,
+				FC020B90293CC32A006B84E3 /* LiveActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC57CE6327A451CA00E4B370 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +626,7 @@
 				FC57CEDF27A464E700E4B370 /* Score.swift in Sources */,
 				FC7EF44527BE480800424DB9 /* ProgressBar.swift in Sources */,
 				FC57CEDD27A452AE00E4B370 /* TomatoTimer.swift in Sources */,
+				FC020B8F293CC32A006B84E3 /* LiveActivityAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +679,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FC020B85293CC224006B84E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC020B73293CC223006B84E3 /* LiveWidgetExtension */;
+			targetProxy = FC020B84293CC224006B84E3 /* PBXContainerItemProxy */;
+		};
 		FC29F1E2293C9BB300CA5DD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC57CE8A27A451CC00E4B370 /* Tomate WatchKit App */;
@@ -592,6 +712,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FC020B88293CC224006B84E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6S6CH5CWHF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate.LiveWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC020B89293CC224006B84E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6S6CH5CWHF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate.LiveWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		FC57CEC227A451CF00E4B370 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -775,6 +956,7 @@
 		FC57CECD27A451CF00E4B370 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -783,6 +965,8 @@
 				DEVELOPMENT_TEAM = 6S6CH5CWHF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tomate/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -809,6 +993,7 @@
 		FC57CECE27A451CF00E4B370 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -817,6 +1002,8 @@
 				DEVELOPMENT_TEAM = 6S6CH5CWHF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tomate/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1010,6 +1197,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC020B8A293CC224006B84E3 /* Build configuration list for PBXNativeTarget "LiveWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC020B88293CC224006B84E3 /* Debug */,
+				FC020B89293CC224006B84E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC57CE6227A451CA00E4B370 /* Build configuration list for PBXProject "Tomate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

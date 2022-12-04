@@ -5,14 +5,25 @@
 //  Created by Fabian Kropfhamer on 28.01.22.
 //
 
-enum TimerState {
+import Foundation
+import AudioToolbox
+
+public enum TimerState {
     case longBreak
     case shortBreak
     case working
+    
+    var name: String {
+        switch self {
+        case .longBreak:
+            return "long Break"
+        case .shortBreak:
+            return "short Break"
+        case .working:
+            return "Work"
+        }
+    }
 }
-
-import Foundation
-import AudioToolbox
 
 class TomatoTimer : ObservableObject {
     @Published var secondsElapsed = 0
@@ -46,11 +57,15 @@ class TomatoTimer : ObservableObject {
     }
     
     private func scheduleNotification() {
-        
+        if #available(iOS 16.1, *) {
+            liveActivityHandler.startActivity(secondsRemaining: secondsRemaining, phase: state.name)
+        }
     }
     
     private func cancelNotification() {
-        
+        if #available(iOS 16.1, *) {
+            liveActivityHandler.stopActivity()
+        }
     }
     
     private func startTimer() {
@@ -100,7 +115,7 @@ class TomatoTimer : ObservableObject {
     }
     
     private func updateState(secondsElapsed: Int) {
-        if (secondsElapsed != targetSeconds) {
+        if (secondsElapsed <= targetSeconds) {
             return
         }
         
