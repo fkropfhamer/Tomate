@@ -47,7 +47,7 @@ struct ContentView: View {
                     }
                 }
             }
-            Text(String(timer.secondsElapsed))
+            Text(String(timer.secondsRemaining))
                 .font(.largeTitle)
                 .fontWeight(.bold).padding(.bottom, 50)
             HStack {

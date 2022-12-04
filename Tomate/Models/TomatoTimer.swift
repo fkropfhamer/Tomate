@@ -51,6 +51,10 @@ class TomatoTimer : ObservableObject {
         }
     }
     
+    public init() {
+        secondsRemaining = targetSeconds - secondsElapsed
+    }
+    
     public func start() {
         startTimer()
         scheduleNotification()
@@ -66,6 +70,10 @@ class TomatoTimer : ObservableObject {
         if #available(iOS 16.1, *) {
             liveActivityHandler.stopActivity()
         }
+    }
+    
+    private func updateRemainingSeconds() {
+        self.secondsRemaining = targetSeconds - secondsElapsed
     }
     
     private func startTimer() {
@@ -104,6 +112,7 @@ class TomatoTimer : ObservableObject {
     
     private func update(secondsElapsed: Int) {
         self.secondsElapsed = secondsElapsed
+        updateRemainingSeconds()
         if timerStopped {return}
         updateProgress()
         
@@ -115,7 +124,7 @@ class TomatoTimer : ObservableObject {
     }
     
     private func updateState(secondsElapsed: Int) {
-        if (secondsElapsed <= targetSeconds) {
+        if (secondsElapsed < targetSeconds) {
             return
         }
         
@@ -143,5 +152,6 @@ class TomatoTimer : ObservableObject {
         
         self.secondsElapsed = 0
         updateProgress()
+        updateRemainingSeconds()
     }
 }
