@@ -16,7 +16,6 @@
 		FC57CE8827A451CC00E4B370 /* TomateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CE8727A451CC00E4B370 /* TomateUITestsLaunchTests.swift */; };
 		FC57CE8C27A451CC00E4B370 /* Tomate WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FC57CE8B27A451CC00E4B370 /* Tomate WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FC57CE9127A451CE00E4B370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57CE9027A451CE00E4B370 /* Assets.xcassets */; };
-		FC57CE9727A451CE00E4B370 /* Tomate WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FC57CE9627A451CE00E4B370 /* Tomate WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FC57CE9C27A451CE00E4B370 /* TomateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CE9B27A451CE00E4B370 /* TomateApp.swift */; };
 		FC57CE9E27A451CE00E4B370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CE9D27A451CE00E4B370 /* ContentView.swift */; };
 		FC57CEA027A451CE00E4B370 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57CE9F27A451CE00E4B370 /* NotificationController.swift */; };
@@ -33,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FC29F1E1293C9BB300CA5DD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC57CE8A27A451CC00E4B370;
+			remoteInfo = "Tomate WatchKit App";
+		};
 		FC57CE7827A451CC00E4B370 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
@@ -54,20 +60,6 @@
 			remoteGlobalIDString = FC57CE8A27A451CC00E4B370;
 			remoteInfo = "Tomate WatchKit App";
 		};
-		FC57CE9827A451CE00E4B370 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC57CE9527A451CE00E4B370;
-			remoteInfo = "Tomate WatchKit Extension";
-		};
-		FC57CEB127A451CF00E4B370 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC57CE9527A451CE00E4B370;
-			remoteInfo = "Tomate WatchKit Extension";
-		};
 		FC57CEBB27A451CF00E4B370 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC57CE5F27A451CA00E4B370 /* Project object */;
@@ -78,17 +70,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FC57CEC727A451CF00E4B370 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				FC57CE9727A451CE00E4B370 /* Tomate WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FC57CECB27A451CF00E4B370 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,7 +96,6 @@
 		FC57CE8727A451CC00E4B370 /* TomateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC57CE8B27A451CC00E4B370 /* Tomate WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tomate WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC57CE9027A451CE00E4B370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC57CE9627A451CE00E4B370 /* Tomate WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tomate WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC57CE9B27A451CE00E4B370 /* TomateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateApp.swift; sourceTree = "<group>"; };
 		FC57CE9D27A451CE00E4B370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC57CE9F27A451CE00E4B370 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -202,7 +182,6 @@
 				FC57CE7727A451CC00E4B370 /* TomateTests.xctest */,
 				FC57CE8127A451CC00E4B370 /* TomateUITests.xctest */,
 				FC57CE8B27A451CC00E4B370 /* Tomate WatchKit App.app */,
-				FC57CE9627A451CE00E4B370 /* Tomate WatchKit Extension.appex */,
 				FC57CEB027A451CF00E4B370 /* Tomate WatchKit AppTests.xctest */,
 				FC57CEBA27A451CF00E4B370 /* Tomate WatchKit AppUITests.xctest */,
 			);
@@ -368,34 +347,17 @@
 			buildConfigurationList = FC57CEC827A451CF00E4B370 /* Build configuration list for PBXNativeTarget "Tomate WatchKit App" */;
 			buildPhases = (
 				FC57CE8927A451CC00E4B370 /* Resources */,
-				FC57CEC727A451CF00E4B370 /* Embed App Extensions */,
+				FC57CE9227A451CE00E4B370 /* Sources */,
+				FC57CE9327A451CE00E4B370 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FC57CE9927A451CE00E4B370 /* PBXTargetDependency */,
 			);
 			name = "Tomate WatchKit App";
 			productName = "Tomate WatchKit App";
 			productReference = FC57CE8B27A451CC00E4B370 /* Tomate WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		FC57CE9527A451CE00E4B370 /* Tomate WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC57CEC427A451CF00E4B370 /* Build configuration list for PBXNativeTarget "Tomate WatchKit Extension" */;
-			buildPhases = (
-				FC57CE9227A451CE00E4B370 /* Sources */,
-				FC57CE9327A451CE00E4B370 /* Frameworks */,
-				FC57CE9427A451CE00E4B370 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Tomate WatchKit Extension";
-			productName = "Tomate WatchKit Extension";
-			productReference = FC57CE9627A451CE00E4B370 /* Tomate WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 		FC57CEAF27A451CF00E4B370 /* Tomate WatchKit AppTests */ = {
 			isa = PBXNativeTarget;
@@ -408,7 +370,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FC57CEB227A451CF00E4B370 /* PBXTargetDependency */,
+				FC29F1E2293C9BB300CA5DD1 /* PBXTargetDependency */,
 			);
 			name = "Tomate WatchKit AppTests";
 			productName = "Tomate WatchKit AppTests";
@@ -441,7 +403,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					FC57CE6627A451CA00E4B370 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -457,12 +419,9 @@
 					FC57CE8A27A451CC00E4B370 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					FC57CE9527A451CE00E4B370 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
 					FC57CEAF27A451CF00E4B370 = {
 						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = FC57CE9527A451CE00E4B370;
+						TestTargetID = FC57CE8A27A451CC00E4B370;
 					};
 					FC57CEB927A451CF00E4B370 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -487,7 +446,6 @@
 				FC57CE7627A451CC00E4B370 /* TomateTests */,
 				FC57CE8027A451CC00E4B370 /* TomateUITests */,
 				FC57CE8A27A451CC00E4B370 /* Tomate WatchKit App */,
-				FC57CE9527A451CE00E4B370 /* Tomate WatchKit Extension */,
 				FC57CEAF27A451CF00E4B370 /* Tomate WatchKit AppTests */,
 				FC57CEB927A451CF00E4B370 /* Tomate WatchKit AppUITests */,
 			);
@@ -522,16 +480,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC57CE9127A451CE00E4B370 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC57CE9427A451CE00E4B370 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				FC57CEA927A451CF00E4B370 /* Preview Assets.xcassets in Resources */,
 				FC57CEA627A451CF00E4B370 /* Assets.xcassets in Resources */,
+				FC57CE9127A451CE00E4B370 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +564,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FC29F1E2293C9BB300CA5DD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC57CE8A27A451CC00E4B370 /* Tomate WatchKit App */;
+			targetProxy = FC29F1E1293C9BB300CA5DD1 /* PBXContainerItemProxy */;
+		};
 		FC57CE7927A451CC00E4B370 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC57CE6627A451CA00E4B370 /* Tomate */;
@@ -627,16 +583,6 @@
 			isa = PBXTargetDependency;
 			target = FC57CE8A27A451CC00E4B370 /* Tomate WatchKit App */;
 			targetProxy = FC57CE8D27A451CC00E4B370 /* PBXContainerItemProxy */;
-		};
-		FC57CE9927A451CE00E4B370 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC57CE9527A451CE00E4B370 /* Tomate WatchKit Extension */;
-			targetProxy = FC57CE9827A451CE00E4B370 /* PBXContainerItemProxy */;
-		};
-		FC57CEB227A451CF00E4B370 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC57CE9527A451CE00E4B370 /* Tomate WatchKit Extension */;
-			targetProxy = FC57CEB127A451CF00E4B370 /* PBXContainerItemProxy */;
 		};
 		FC57CEBC27A451CF00E4B370 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -680,6 +626,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -739,6 +686,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -757,85 +705,27 @@
 			};
 			name = Release;
 		};
-		FC57CEC527A451CF00E4B370 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tomate WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 6S6CH5CWHF;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Tomate WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Tomate WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
-			};
-			name = Debug;
-		};
-		FC57CEC627A451CF00E4B370 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tomate WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 6S6CH5CWHF;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Tomate WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Tomate WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
-			};
-			name = Release;
-		};
 		FC57CEC927A451CF00E4B370 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6S6CH5CWHF;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = Tomate_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tomate WatchKit App";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.telefongarten.Tomate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -853,15 +743,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6S6CH5CWHF;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = Tomate_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tomate WatchKit App";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.telefongarten.Tomate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -900,9 +797,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -931,9 +831,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.telefongarten.Tomate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1038,7 +941,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomate WatchKit Extension.appex/Tomate WatchKit Extension";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomate WatchKit App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tomate WatchKit App";
 				WATCHOS_DEPLOYMENT_TARGET = 8.3;
 			};
 			name = Debug;
@@ -1059,7 +962,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomate WatchKit Extension.appex/Tomate WatchKit Extension";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomate WatchKit App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tomate WatchKit App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 8.3;
 			};
@@ -1112,15 +1015,6 @@
 			buildConfigurations = (
 				FC57CEC227A451CF00E4B370 /* Debug */,
 				FC57CEC327A451CF00E4B370 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC57CEC427A451CF00E4B370 /* Build configuration list for PBXNativeTarget "Tomate WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC57CEC527A451CF00E4B370 /* Debug */,
-				FC57CEC627A451CF00E4B370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
