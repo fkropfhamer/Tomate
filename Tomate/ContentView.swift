@@ -27,36 +27,36 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            NavigationLink(destination: Text("Score " + String(score.score))) {
-                Text("Hello, world!")
-            }
-            Text(status)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.top, 50)
-            ZStack {
-                ProgressBar(progress: $timer.progress).padding(50)
-                if (timer.timerStopped) {
-                    Button(action: start) {
-                        Text("Start")
+        ZStack {
+            backgroundColor.ignoresSafeArea()
+            VStack {
+                Text(status)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.top, 50)
+                ZStack {
+                    ProgressBar(progress: $timer.progress).padding(50)
+                    if (timer.timerStopped) {
+                        Button(action: start) {
+                            Text("Start")
+                        }
+                    } else {
+                        Button(action: stop) {
+                            Text("Stop")
+                        }
                     }
-                } else {
-                    Button(action: stop) {
-                        Text("Stop")
+                }
+                Text(String(timer.secondsRemaining))
+                    .font(.largeTitle)
+                    .fontWeight(.bold).padding(.bottom, 50)
+                HStack {
+                    Text(String(timer.tomatoCount) + " / 4")
+                    Button(action: skip) {
+                        Text("Skip")
                     }
                 }
             }
-            Text(String(timer.secondsRemaining))
-                .font(.largeTitle)
-                .fontWeight(.bold).padding(.bottom, 50)
-            HStack {
-                Text(String(timer.tomatoCount) + " / 4")
-                Button(action: skip) {
-                    Text("Skip")
-                }
-            }
-        }.background(backgroundColor)
+        }
     }
     
     private func start() {
