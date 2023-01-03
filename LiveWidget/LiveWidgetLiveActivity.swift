@@ -15,7 +15,9 @@ struct LiveActivityView: View {
     var body: some View {
         HStack {
             Text(context.state.phase).font(.headline)
-            Text(context.state.endTime, style: .timer)
+            if (context.state.endTime != nil) {
+                Text(context.state.endTime!, style: .timer)
+            }
         }
         .activityBackgroundTint(Color.cyan)
         .activitySystemActionForegroundColor(Color.black)

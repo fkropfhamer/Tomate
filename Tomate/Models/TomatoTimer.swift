@@ -7,6 +7,43 @@
 
 import Foundation
 import AudioToolbox
+import UserNotifications
+
+
+public class NotificationHandler {
+    public static func askNotificationPermission() {
+        let current = UNUserNotificationCenter.current()
+
+        current.getNotificationSettings() {  settings in
+            if settings.authorizationStatus == .notDetermined {
+                current.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
+    
+    public static func scheduleNotification(timeInterval: TimeInterval, phase: String) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Alarm! You finished \(phase)"
+        //content.subtitle = ""
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    public static func cancelNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+}
+
+
 
 public enum TimerState {
     case longBreak
@@ -61,14 +98,18 @@ class TomatoTimer : ObservableObject {
     }
     
     private func scheduleNotification() {
-        if #available(iOS 16.1, *) {
+        NotificationHandler.scheduleNotification(timeInterval: TimeInterval(secondsRemaining), phase: state.name)
+        
+        if #available(iOS 16.2, *) {
             liveActivityHandler.startActivity(secondsRemaining: secondsRemaining, phase: state.name)
         }
     }
     
     private func cancelNotification() {
-        if #available(iOS 16.1, *) {
-            liveActivityHandler.stopActivity()
+        NotificationHandler.cancelNotifications()
+        
+        if #available(iOS 16.2, *) {
+            liveActivityHandler.pauseActivity()
         }
     }
     

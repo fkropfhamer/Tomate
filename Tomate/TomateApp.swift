@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct TomateApp: App {
+    init() {
+        NotificationHandler.askNotificationPermission()
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
