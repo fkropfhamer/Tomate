@@ -101,7 +101,9 @@ class TomatoTimer : ObservableObject {
         NotificationHandler.scheduleNotification(timeInterval: TimeInterval(secondsRemaining), phase: state.name)
         
         if #available(iOS 16.2, *) {
-            liveActivityHandler.startActivity(secondsRemaining: secondsRemaining, phase: state.name)
+            Task {
+                await liveActivityHandler.startActivity(secondsRemaining: secondsRemaining, phase: state.name)
+            }
         }
     }
     
