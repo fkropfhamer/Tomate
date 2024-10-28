@@ -56,7 +56,11 @@ struct ContentView: View {
                     }
                 }
             }
-        }
+        }.navigationBarItems(trailing: NavigationLink {
+            SettingsView()
+        } label: {
+            Image(systemName: "gear").foregroundColor(.black)
+        })
     }
     
     private func start() {
