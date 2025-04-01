@@ -1,10 +1,3 @@
-//
-//  TomatoTimer.swift
-//  Tomate
-//
-//  Created by Fabian Kropfhamer on 28.01.22.
-//
-
 import Foundation
 import AudioToolbox
 import UserNotifications
@@ -100,19 +93,19 @@ class TomatoTimer : ObservableObject {
     private func scheduleNotification() {
         NotificationHandler.scheduleNotification(timeInterval: TimeInterval(secondsRemaining), phase: state.name)
         
-        if #available(iOS 16.2, *) {
-            Task {
-                await liveActivityHandler.startActivity(secondsRemaining: secondsRemaining, phase: state.name)
-            }
-        }
+//        if #available(iOS 16.2, *) {
+//            Task {
+//                await liveActivityHandler.startActivity(secondsRemaining: secondsRemaining, phase: state.name)
+//            }
+//        }
     }
     
     private func cancelNotification() {
         NotificationHandler.cancelNotifications()
         
-        if #available(iOS 16.2, *) {
-            liveActivityHandler.pauseActivity()
-        }
+//        if #available(iOS 16.2, *) {
+//            liveActivityHandler.pauseActivity()
+//        }
     }
     
     private func updateRemainingSeconds() {
@@ -198,3 +191,4 @@ class TomatoTimer : ObservableObject {
         updateRemainingSeconds()
     }
 }
+

@@ -1,10 +1,3 @@
-//
-//  Score.swift
-//  Tomate
-//
-//  Created by Fabian Kropfhamer on 28.01.22.
-//
-
 import Foundation
 
 class Score : ObservableObject {

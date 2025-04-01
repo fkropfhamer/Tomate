@@ -1,10 +1,3 @@
-//
-//  ProgressBar.swift
-//  Tomate
-//
-//  Created by Fabian Kropfhamer on 17.02.22.
-//
-
 import SwiftUI
 
 struct ProgressBar: View {
