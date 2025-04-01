@@ -20,11 +20,12 @@ struct ContentView: View {
                     Text(status)
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .foregroundColor(Color(UIColor(named: "TextColor")!))
                     ZStack {
                         ProgressBar(progress: $timer.progress).padding(50)
                         if (timer.timerStopped) {
                             Button(action: start) {
-                                Text("Start")
+                                StartButton(color: Color(UIColor(named: "WorkColor")!))
                             }
                         } else {
                             Button(action: stop) {
@@ -34,7 +35,7 @@ struct ContentView: View {
                     }
                     Text(String(timer.secondsRemaining))
                         .font(.largeTitle)
-                        .fontWeight(.bold).padding(.bottom, 50)
+                        .fontWeight(.bold).padding(.bottom, 50).foregroundColor(Color(UIColor(named: "TextColor")!))
                     HStack {
                         Text(String(timer.tomatoCount) + " / 4")
                         Button(action: skip) {
@@ -46,7 +47,7 @@ struct ContentView: View {
             .navigationBarItems(trailing: NavigationLink {
                 SettingsView()
             } label: {
-                Image(systemName: "gear").foregroundColor(.black)
+                Image(systemName: "gear").foregroundColor(Color(UIColor(named: "TextColor")!))
             })
         }
     }
