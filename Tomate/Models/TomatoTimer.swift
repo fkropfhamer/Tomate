@@ -90,6 +90,17 @@ class TomatoTimer : ObservableObject {
         scheduleNotification()
     }
     
+    public func reset() {
+        stop()
+        secondsElapsed = 0
+        timerStopped = true
+        state = .working
+        secondsRemaining = targetSeconds
+        isPaused = false
+        progress = 0.0
+        tomatoCount = 0
+    }
+    
     private func scheduleNotification() {
         NotificationHandler.scheduleNotification(timeInterval: TimeInterval(secondsRemaining), phase: state.name)
         

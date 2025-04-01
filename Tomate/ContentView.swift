@@ -38,9 +38,13 @@ struct ContentView: View {
                         .fontWeight(.bold).padding(.bottom, 50).foregroundColor(Color(UIColor(named: "TextColor")!))
                     HStack {
                         Text(String(timer.tomatoCount) + " / 4")
-                        Button(action: skip) {
+                        Button(action: {}) {
                             Text("Skip")
                         }
+                        .highPriorityGesture(TapGesture().onEnded({ _ in skip()}))
+                        .simultaneousGesture(LongPressGesture().onEnded({_ in
+                            reset()
+                        }))
                     }
                 }
             }
@@ -62,6 +66,10 @@ struct ContentView: View {
     
     private func skip() {
         timer.skip()
+    }
+    
+    private func reset() {
+        timer.reset()
     }
 }
 
